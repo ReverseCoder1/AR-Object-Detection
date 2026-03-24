@@ -1,0 +1,22 @@
+# AR Object Detection System — Requirements
+# Python 3.11.14  |  CPU-only (no GPU required)
+# ─────────────────────────────────────────────
+
+# ── Core ML / Detection ─────────────────────────────────────────
+ultralytics>=8.0.0          # YOLOv8  (auto-downloads model weights on first run)
+opencv-python>=4.8.0        # Video capture, drawing, image I/O
+numpy>=1.24.0               # Array math
+
+# ── ONNX Runtime (CPU-optimized inference — ~2x faster than .pt on CPU) ──
+onnxruntime>=1.17.0         # CPU ONNX inference engine
+# onnxruntime-gpu>=1.17.0   # Uncomment instead if you have CUDA GPU
+
+# ── Utilities ───────────────────────────────────────────────────
+tqdm>=4.66.0                # Progress bars during training/export
+Pillow>=10.0.0              # Image utilities used by ultralytics
+PyYAML>=6.0                 # dataset.yaml parsing
+
+# ── Optional: GPU (CUDA 11.8) ───────────────────────────────────
+# torch>=2.0.0+cu118
+# torchvision>=0.15.0+cu118
+# onnxruntime-gpu>=1.17.0
